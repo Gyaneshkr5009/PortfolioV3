@@ -41,7 +41,7 @@ const Contact = () => {
 
         {/* Contact Form */}
         <div className="flex justify-center items-center from-gray-50 to-gray-200">
-          <div className="w-full max-w-2xl bg-white/90 backdrop-blur-sm border border-gray-200 rounded-2xl shadow-xl p-8 transition-all duration-300 bg-[url('./public/anime.jpg')] bg-cover bg-center bg-no-repeat">
+          <div className="w-full max-w-2xl bg-white/90 backdrop-blur-sm border border-gray-200 rounded-2xl shadow-xl p-8 transition-all duration-300 bg-[url('/anime.jpg')] bg-cover bg-center bg-no-repeat">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">Contact Me</h2>
             
             <form
