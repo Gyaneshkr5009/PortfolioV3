@@ -23,7 +23,7 @@ const InfoBar = () => {
         <PanelLeftOpen size={24} />
       </button>
 
-      <div className={`fixed top-0 left-0 z-40 h-screen w-72 bg-[#040B14] text-white p-6 transition-transform duration-300 ease-in-out ${
+      <div className={`fixed top-0 left-0 z-50 h-screen w-72 bg-[#040B14] text-white p-6 transition-transform duration-300 ease-in-out ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
       } md:translate-x-0 md:flex md:flex-col md:h-screen`}>
 

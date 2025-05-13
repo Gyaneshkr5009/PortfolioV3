@@ -53,7 +53,7 @@ export default function RightPane() {
             </div>
 
             {/* Mobile Bottom Nav */}
-            <nav className="md:hidden fixed bottom-0 left-0 w-full bg-[#253030] backdrop-blur-md border-t border-gray-700 rounded-t-xl shadow-md z-50">
+            <nav className="md:hidden fixed bottom-0 left-0 w-full bg-[#253030] backdrop-blur-md border-t border-gray-700 rounded-t-xl shadow-md z-40">
                 <ul className="flex justify-center items-center flex-wrap px-4">
                     {tabs.map(tab => (
                         <li key={tab} className="mx-2">
