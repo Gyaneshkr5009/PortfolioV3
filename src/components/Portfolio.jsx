@@ -1,5 +1,5 @@
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "../components/ui/tabs"
-import React from "react"
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "../components/ui/tabs";
+import React from "react";
 
 const projects = [
   {
@@ -9,17 +9,17 @@ const projects = [
   },
   {
     title: "Moto-Hub",
-    category: "web Apps",
+    category: "webapps",
     link: "https://revnation.vercel.app/",
   },
   {
     title: "My Personal Blog",
-    category: "web Apps",
+    category: "webapps",
     link: "https://gyaneshkr-blog-site.vercel.app/",
   },
   {
     title: "Restro",
-    category: "web Apps",
+    category: "webapps",
     link: "https://restro-nine-zeta.vercel.app/",
   },
   {
@@ -29,12 +29,12 @@ const projects = [
   },
   {
     title: "Password Generator",
-    category: "web Apps",
+    category: "webapps",
     link: "https://password-generator-murex-phi.vercel.app/",
   },
   {
     title: "Currency Converter",
-    category: "web Apps",
+    category: "webapps",
     link: "https://currency-convertor-drab.vercel.app/",
   },
   {
@@ -62,7 +62,7 @@ const projects = [
     category: "web",
     link: "https://gyaneshkr5009.github.io/Calculator/",
   },
-]
+];
 
 const Portfolio = () => {
   return (
@@ -75,11 +75,31 @@ const Portfolio = () => {
         </header>
 
         <Tabs defaultValue="all" className="w-full">
-          <TabsList className="flex justify-center sm:justify-between md:justify-between lg:justify-between gap-4 mb-8 flex-wrap">
-            <TabsTrigger value="all">All Projects</TabsTrigger>
-            <TabsTrigger value="web">Website</TabsTrigger>
-            <TabsTrigger value="web Apps">Web Apps</TabsTrigger>
-            <TabsTrigger value="mobile">Mobile Apps</TabsTrigger>
+          <TabsList className="flex justify-between gap-3 sm:gap-4 mb-8 flex-wrap">
+            <TabsTrigger
+              value="all"
+              className="px-5 py-2.5 rounded-full text-sm font-semibold text-muted-foreground hover:text-foreground hover:bg-accent transition-colors duration-200 data-[state=active]:bg-primary data-[state=active]:text-white"
+            >
+              All
+            </TabsTrigger>
+            <TabsTrigger
+              value="web"
+              className="px-5 py-2.5 rounded-full text-sm font-semibold text-muted-foreground hover:text-foreground hover:bg-accent transition-colors duration-200 data-[state=active]:bg-primary data-[state=active]:text-white"
+            >
+              Website
+            </TabsTrigger>
+            <TabsTrigger
+              value="webapps"
+              className="px-5 py-2.5 rounded-full text-sm font-semibold text-muted-foreground hover:text-foreground hover:bg-accent transition-colors duration-200 data-[state=active]:bg-primary data-[state=active]:text-white"
+            >
+              Web Apps
+            </TabsTrigger>
+            <TabsTrigger
+              value="mobile"
+              className="px-5 py-2.5 rounded-full text-sm font-semibold text-muted-foreground hover:text-foreground hover:bg-accent transition-colors duration-200 data-[state=active]:bg-primary data-[state=active]:text-white"
+            >
+              Mobile
+            </TabsTrigger>
           </TabsList>
 
           <TabsContent value="all">
@@ -87,21 +107,27 @@ const Portfolio = () => {
           </TabsContent>
 
           <TabsContent value="web">
-            <ProjectGrid projects={projects.filter(p => p.category === "web")} />
+            <ProjectGrid
+              projects={projects.filter((p) => p.category === "web")}
+            />
           </TabsContent>
 
-          <TabsContent value="web Apps">
-            <ProjectGrid projects={projects.filter(p => p.category === "web Apps")} />
+          <TabsContent value="webapps">
+            <ProjectGrid
+              projects={projects.filter((p) => p.category === "webapps")}
+            />
           </TabsContent>
 
           <TabsContent value="mobile">
-            <ProjectGrid projects={projects.filter(p => p.category === "mobile")} />
+            <ProjectGrid
+              projects={projects.filter((p) => p.category === "mobile")}
+            />
           </TabsContent>
         </Tabs>
       </div>
     </section>
-  )
-}
+  );
+};
 
 const ProjectGrid = ({ projects }) => (
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -110,7 +136,12 @@ const ProjectGrid = ({ projects }) => (
         key={index}
         className="relative group border border-gray-300 rounded-lg overflow-hidden bg-white hover:shadow-md transition-all"
       >
-        <a href={project.link} target="_blank" rel="noopener noreferrer" className="block">
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block"
+        >
           {/* Project Image */}
           <img
             src={`https://api.microlink.io/?url=${project.link}&screenshot=true&embed=screenshot.url`}
@@ -118,21 +149,26 @@ const ProjectGrid = ({ projects }) => (
             className="w-full h-56 object-cover"
           />
 
-
           {/* Hover Overlay */}
           <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
-            <span className="text-white text-lg font-semibold">View Project 🔗</span>
+            <span className="text-white text-lg font-semibold">
+              View Project 🔗
+            </span>
           </div>
 
           {/* Title & Category */}
           <div className="p-5 border-t border-gray-200">
-            <h3 className="text-lg font-bold text-gray-800">{project.title}</h3>
-            <p className="text-sm text-gray-600 mt-1 capitalize">{project.category} App</p>
+            <h3 className="text-lg font-bold text-gray-800">
+              {project.title}
+            </h3>
+            <p className="text-sm text-gray-600 mt-1 capitalize">
+              {project.category} App
+            </p>
           </div>
         </a>
       </div>
     ))}
   </div>
-)
+);
 
-export default Portfolio
+export default Portfolio;
