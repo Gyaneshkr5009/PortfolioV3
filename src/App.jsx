@@ -8,9 +8,7 @@ const App = () => {
     <TabProvider>
       <div className="min-h-screen flex bg-gray-100">
         {/* Sidebar */}
-        <div className="md:block w-72 fixed top-0 left-0 h-full z-40">
-          <InfoBar />
-        </div>
+        <InfoBar />
 
         {/* Main Content */}
         <div className="flex-1 md:ml-72 w-full">

@@ -75,28 +75,28 @@ const Portfolio = () => {
         </header>
 
         <Tabs defaultValue="all" className="w-full">
-          <TabsList className="flex justify-between gap-3 sm:gap-4 mb-8 flex-wrap">
+          <TabsList className="flex flex-wrap justify-between gap-3 sm:gap-4 mb-8 w-full">
             <TabsTrigger
               value="all"
-              className="px-5 py-2.5 rounded-full text-sm font-semibold text-muted-foreground hover:text-foreground hover:bg-accent transition-colors duration-200 data-[state=active]:bg-primary data-[state=active]:text-white"
+              className="px-5 py-2 rounded-full text-sm font-semibold text-muted-foreground hover:text-foreground hover:bg-accent transition-colors duration-200 data-[state=active]:bg-primary data-[state=active]:text-white"
             >
               All
             </TabsTrigger>
             <TabsTrigger
               value="web"
-              className="px-5 py-2.5 rounded-full text-sm font-semibold text-muted-foreground hover:text-foreground hover:bg-accent transition-colors duration-200 data-[state=active]:bg-primary data-[state=active]:text-white"
+              className="px-5 py-2 rounded-full text-sm font-semibold text-muted-foreground hover:text-foreground hover:bg-accent transition-colors duration-200 data-[state=active]:bg-primary data-[state=active]:text-white"
             >
               Website
             </TabsTrigger>
             <TabsTrigger
               value="webapps"
-              className="px-5 py-2.5 rounded-full text-sm font-semibold text-muted-foreground hover:text-foreground hover:bg-accent transition-colors duration-200 data-[state=active]:bg-primary data-[state=active]:text-white"
+              className="px-5 py-2 rounded-full text-sm font-semibold text-muted-foreground hover:text-foreground hover:bg-accent transition-colors duration-200 data-[state=active]:bg-primary data-[state=active]:text-white"
             >
               Web Apps
             </TabsTrigger>
             <TabsTrigger
               value="mobile"
-              className="px-5 py-2.5 rounded-full text-sm font-semibold text-muted-foreground hover:text-foreground hover:bg-accent transition-colors duration-200 data-[state=active]:bg-primary data-[state=active]:text-white"
+              className="px-5 py-2 rounded-full text-sm font-semibold text-muted-foreground hover:text-foreground hover:bg-accent transition-colors duration-200 data-[state=active]:bg-primary data-[state=active]:text-white"
             >
               Mobile
             </TabsTrigger>
@@ -134,7 +134,7 @@ const ProjectGrid = ({ projects }) => (
     {projects.map((project, index) => (
       <div
         key={index}
-        className="relative group border border-gray-300 rounded-lg overflow-hidden bg-white hover:shadow-md transition-all"
+        className="relative group border border-gray-300 rounded-lg overflow-hidden bg-white hover:shadow-lg transition-all"
       >
         <a
           href={project.link}
@@ -142,25 +142,21 @@ const ProjectGrid = ({ projects }) => (
           rel="noopener noreferrer"
           className="block"
         >
-          {/* Project Image */}
-          <img
-            src={`https://api.microlink.io/?url=${project.link}&screenshot=true&embed=screenshot.url`}
-            alt={project.title}
-            className="w-full h-56 object-cover"
-          />
-
-          {/* Hover Overlay */}
-          <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
-            <span className="text-white text-lg font-semibold">
-              View Project 🔗
-            </span>
+          <div className="relative overflow-hidden">
+            <img
+              src={`https://api.microlink.io/?url=${project.link}&screenshot=true&embed=screenshot.url`}
+              alt={project.title}
+              className="w-full h-56 object-cover transform transition-transform duration-300 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <span className="text-white text-lg font-semibold">
+                View Project 🔗
+              </span>
+            </div>
           </div>
 
-          {/* Title & Category */}
           <div className="p-5 border-t border-gray-200">
-            <h3 className="text-lg font-bold text-gray-800">
-              {project.title}
-            </h3>
+            <h3 className="text-lg font-bold text-gray-800">{project.title}</h3>
             <p className="text-sm text-gray-600 mt-1 capitalize">
               {project.category} App
             </p>
@@ -170,5 +166,8 @@ const ProjectGrid = ({ projects }) => (
     ))}
   </div>
 );
+
+
+
 
 export default Portfolio;
