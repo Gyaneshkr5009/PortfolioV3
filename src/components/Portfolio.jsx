@@ -75,11 +75,11 @@ const Portfolio = () => {
         </header>
 
         <Tabs defaultValue="all" className="w-full">
-          <TabsList className="flex justify-center sm:justify-between md:justify-between lg:justify-between gap-4 mb-8 flex-nowrap">
-            <TabsTrigger value="all" className="px-4 py-2 text-sm font-semibold text-gray-800 hover:bg-gray-200 rounded-md transition-all">All Projects</TabsTrigger>
-            <TabsTrigger value="web" className="px-4 py-2 text-sm font-semibold text-gray-800 hover:bg-gray-200 rounded-md transition-all">Website</TabsTrigger>
-            <TabsTrigger value="web Apps" className="px-4 py-2 text-sm font-semibold text-gray-800 hover:bg-gray-200 rounded-md transition-all">Web Apps</TabsTrigger>
-            <TabsTrigger value="mobile" className="px-4 py-2 text-sm font-semibold text-gray-800 hover:bg-gray-200 rounded-md transition-all">Mobile Apps</TabsTrigger>
+          <TabsList className="flex justify-center sm:justify-between md:justify-between lg:justify-between gap-4 mb-8 flex-wrap">
+            <TabsTrigger value="all">All Projects</TabsTrigger>
+            <TabsTrigger value="web">Website</TabsTrigger>
+            <TabsTrigger value="web Apps">Web Apps</TabsTrigger>
+            <TabsTrigger value="mobile">Mobile Apps</TabsTrigger>
           </TabsList>
 
           <TabsContent value="all">
