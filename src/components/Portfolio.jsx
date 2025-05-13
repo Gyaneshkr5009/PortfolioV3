@@ -66,16 +66,20 @@ const projects = [
 
 const Portfolio = () => {
   return (
-    <section id="portfolio" className="py-20 bg-gray-100">
-      <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-10">Portfolio</h2>
+    <section id="portfolio" className="p-6 md:p-10 bg-white text-gray-800">
+      <div className="max-w-7xl mx-auto">
+        <header className="mb-8">
+          <h2 className="text-4xl font-bold border-b-4 border-indigo-500 inline-block pb-2">
+            Portfolio
+          </h2>
+        </header>
 
         <Tabs defaultValue="all" className="w-full">
-          <TabsList className="flex justify-center gap-4 mb-8 flex-wrap">
-            <TabsTrigger value="all">All Projects</TabsTrigger>
-            <TabsTrigger value="web">Website</TabsTrigger>
-            <TabsTrigger value="web Apps">Web Apps</TabsTrigger>
-            <TabsTrigger value="mobile">Mobile Apps</TabsTrigger>
+          <TabsList className="flex justify-center sm:justify-between md:justify-between lg:justify-between gap-4 mb-8 flex-nowrap">
+            <TabsTrigger value="all" className="px-4 py-2 text-sm font-semibold text-gray-800 hover:bg-gray-200 rounded-md transition-all">All Projects</TabsTrigger>
+            <TabsTrigger value="web" className="px-4 py-2 text-sm font-semibold text-gray-800 hover:bg-gray-200 rounded-md transition-all">Website</TabsTrigger>
+            <TabsTrigger value="web Apps" className="px-4 py-2 text-sm font-semibold text-gray-800 hover:bg-gray-200 rounded-md transition-all">Web Apps</TabsTrigger>
+            <TabsTrigger value="mobile" className="px-4 py-2 text-sm font-semibold text-gray-800 hover:bg-gray-200 rounded-md transition-all">Mobile Apps</TabsTrigger>
           </TabsList>
 
           <TabsContent value="all">

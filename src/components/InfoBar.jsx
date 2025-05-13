@@ -1,5 +1,5 @@
 import React , { useState } from 'react';
-import Image from '../../public/Image.png';
+import Image from '/Image.png';
 import { IoIosMail } from "react-icons/io";
 import { IoPhonePortrait } from "react-icons/io5";
 import { FaLocationDot } from "react-icons/fa6";
@@ -17,10 +17,12 @@ const InfoBar = () => {
     <>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="md:hidden p-3 text-white bg-[#040B14] fixed top-4 left-4 z-50 rounded-md shadow-lg"
+        className="md:hidden fixed top-5 right-5 z-50 p-2 bg-[#253030] text-white rounded-lg shadow-md hover:bg-[#0e1624] transition"
+        aria-label="Toggle sidebar"
       >
-        <PanelLeftOpen size={28} />
+        <PanelLeftOpen size={24} />
       </button>
+
       <div className={`fixed top-0 left-0 z-40 h-screen w-72 bg-[#040B14] text-white p-6 transition-transform duration-300 ease-in-out ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
       } md:translate-x-0 md:flex md:flex-col md:h-screen`}>
