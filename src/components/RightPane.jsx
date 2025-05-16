@@ -54,12 +54,12 @@ export default function RightPane() {
 
             {/* Mobile Bottom Nav */}
             <nav className="md:hidden fixed bottom-0 left-0 w-full bg-[#253030] backdrop-blur-md border-t border-gray-700 rounded-t-xl shadow-md z-40">
-                <ul className="flex justify-center items-center flex-wrap px-4">
+                <ul className="flex justify-center items-center flex-wrap px-2">
                     {tabs.map(tab => (
                         <li key={tab} className="mx-2">
                             <button
                                 onClick={() => setActiveTab(tab)}
-                                className={`text-sm px-3 py-4 font-medium transition-colors duration-300 ${
+                                className={`text-sm px-2 py-2 font-medium transition-colors duration-300 ${
                                     activeTab === tab
                                         ? 'text-indigo-400'
                                         : 'text-gray-200 hover:text-gray-400'

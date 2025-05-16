@@ -1,5 +1,6 @@
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "../components/ui/tabs";
 import React from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const projects = [
   {
@@ -129,45 +130,54 @@ const Portfolio = () => {
   );
 };
 
+
+
 const ProjectGrid = ({ projects }) => (
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-    {projects.map((project, index) => (
-      <div
-        key={index}
-        className="relative group border border-gray-300 rounded-lg overflow-hidden bg-white hover:shadow-lg transition-all"
-      >
-        <a
-          href={project.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block"
+  <AnimatePresence mode="wait">
+    <motion.div
+      key={projects.map((p) => p.title).join("-")} // ensures unique key on each tab switch
+      initial={{ opacity: 0, scale: 0.9, y: 30 }}
+      animate={{ opacity: 1, scale: 1, y: 0 }}
+      exit={{ opacity: 0, scale: 0.9, y: -30 }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+    >
+      {projects.map((project, index) => (
+        <div
+          key={index}
+          className="relative group border border-gray-300 rounded-lg overflow-hidden bg-white hover:shadow-lg transition-all"
         >
-          <div className="relative overflow-hidden">
-            <img
-              src={`https://api.microlink.io/?url=${project.link}&screenshot=true&embed=screenshot.url`}
-              alt={project.title}
-              className="w-full h-56 object-cover transform transition-transform duration-300 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span className="text-white text-lg font-semibold">
-                View Project 🔗
-              </span>
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
+          >
+            <div className="relative overflow-hidden">
+              <img
+                src={`https://api.microlink.io/?url=${project.link}&screenshot=true&embed=screenshot.url`}
+                alt={project.title}
+                className="w-full h-56 object-cover transform transition-transform duration-300 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <span className="text-white text-lg font-semibold">
+                  View Project 🔗
+                </span>
+              </div>
             </div>
-          </div>
 
-          <div className="p-5 border-t border-gray-200">
-            <h3 className="text-lg font-bold text-gray-800">{project.title}</h3>
-            <p className="text-sm text-gray-600 mt-1 capitalize">
-              {project.category} App
-            </p>
-          </div>
-        </a>
-      </div>
-    ))}
-  </div>
+            <div className="p-5 border-t border-gray-200">
+              <h3 className="text-lg font-bold text-gray-800">{project.title}</h3>
+              <p className="text-sm text-gray-600 mt-1 capitalize">
+                {project.category} App
+              </p>
+            </div>
+          </a>
+        </div>
+      ))}
+    </motion.div>
+  </AnimatePresence>
 );
-
-
 
 
 export default Portfolio;
