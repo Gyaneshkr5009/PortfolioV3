@@ -59,7 +59,7 @@ export default function RightPane() {
                         <li key={tab} className="mx-2">
                             <button
                                 onClick={() => setActiveTab(tab)}
-                                className={`text-sm px-2 py-2 font-medium transition-colors duration-300 ${
+                                className={`text-sm px-2 py-3 font-medium transition-colors duration-300 ${
                                     activeTab === tab
                                         ? 'text-indigo-400'
                                         : 'text-gray-200 hover:text-gray-400'
