@@ -4,15 +4,18 @@ import {
     Contact,
     Certificates,
     Portfolio,
-    Resume
+    Resume,
+    Home
 } from './index';
 
 export default function RightPane() {
-    const tabs = ['About', 'Resume','Portfolio', 'Certificates', 'Contact'];
+    const tabs = ['Home','About', 'Resume','Portfolio', 'Certificates', 'Contact'];
     const { activeTab, setActiveTab } = useTab();
 
     const renderTabContent = () => {
         switch (activeTab) {
+            case 'Home':
+                return <Home />;
             case 'About':
                 return <About />;
             case 'Contact':
@@ -24,7 +27,7 @@ export default function RightPane() {
             case 'Resume':
                 return <Resume />;
             default:
-                return <About />;
+                return <Home />;
         }
     };
 
@@ -36,7 +39,7 @@ export default function RightPane() {
                 <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
-                    className={`md:px-2 lg:px-4 py-2 font-semibold transition-colors duration-300 ${
+                    className={`md:px-1 lg:px-2 py-2 font-semibold transition-colors duration-300 ${
                     activeTab === tab
                         ? 'text-indigo-400 border-b-2 border-indigo-400'
                         : 'text-gray-300 hover:text-white'
@@ -48,7 +51,7 @@ export default function RightPane() {
             </div>
 
             {/* Tab Content */}
-            <div className="flex-1 p-2"> {/* Add padding-top to push content down */}
+            <div className="flex-1 p-2 sm:pt-4 md:pt-4 lg:pt-2"> {/* Add padding-top to push content down */}
                 {renderTabContent()}
             </div>
 
@@ -59,7 +62,7 @@ export default function RightPane() {
                         <li key={tab} className="mx-2">
                             <button
                                 onClick={() => setActiveTab(tab)}
-                                className={`text-sm px-2 py-3 font-medium transition-colors duration-300 ${
+                                className={`text-xs px-2 py-3 font-medium transition-colors duration-300 ${
                                     activeTab === tab
                                         ? 'text-indigo-400'
                                         : 'text-gray-200 hover:text-gray-400'
