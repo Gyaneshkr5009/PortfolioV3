@@ -4,6 +4,16 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const projects = [
   {
+    title: "Emperior Explorer",
+    category: "web",
+    link: "https://historic-empires-explorer.vercel.app/",
+  },
+  {
+    title: "Linkup(Social Media)",
+    category: "web",
+    link: "https://link-up-ochre.vercel.app/",
+  },
+  {
     title: "Bank Management System",
     category: "web",
     link: "https://github.com/Gyaneshkr5009/Bank_Management_System/blob/main/screenshots/login.png?raw=true",
