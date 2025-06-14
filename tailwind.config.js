@@ -56,5 +56,40 @@ export default {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+		require("tailwindcss-animate"),
+		require("daisyui"), // ✅ ADD THIS LINE
+  ],
+  daisyui: {
+    themes: [
+		"light", 
+		"dark", 
+		"cupcake", 
+		"bumblebee", 
+		"corporate", 
+		"synthwave", 
+		"retro", 
+		"cyberpunk", 
+		"valentine", 
+		"halloween", 
+		"garden", 
+		"forest", 
+		"aqua", 
+		"lofi", 
+		"pastel", 
+		"fantasy", 
+		"wireframe", 
+		"black", 
+		"luxury", 
+		"dracula", 
+		"cmyk", 
+		"autumn", 
+		"business", 
+		"acid", 
+		"lemonade", 
+		"night", 
+		"coffee", 
+		"winter"
+	], // ✅ Choose or use "themes: ['light', 'dark', 'cupcake', ...]"
+  },
 }

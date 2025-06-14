@@ -9,6 +9,7 @@ import { BsYoutube } from "react-icons/bs";
 import { RiTwitterXFill } from "react-icons/ri";
 import { FaBirthdayCake } from "react-icons/fa";
 import { PanelLeftOpen } from 'lucide-react';
+import { Palette } from 'lucide-react';
 
 const InfoBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -65,6 +66,20 @@ const InfoBar = () => {
           <InfoItem icon={<IoPhonePortrait />} label="Phone" value="+91 8368296563" href="tel:+918368296563" />
           <InfoItem icon={<FaBirthdayCake />} label="Birthday" value="25th June 2003" />
         </div>
+        {/* theme changer */}
+        <div className="mt-auto w-full">
+          <button
+            onClick={() => {
+              // Replace with your navigation logic, e.g., navigate('/theme') or window.location.href = "/theme"
+              console.log("Go to Theme Selector Page");
+            }}
+            className="flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl bg-gray-800 hover:bg-cyan-600 text-white text-sm font-medium shadow-md transition"
+          >
+            <Palette size={18} />
+            <span>Theme Changer</span>
+          </button>
+        </div>
+
       </div>
     </>
   );
