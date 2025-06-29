@@ -18,13 +18,13 @@ const InfoBar = () => {
     <>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="md:hidden fixed top-5 right-5 z-50 p-2 bg-[#253030] text-white rounded-lg shadow-md hover:bg-[#0e1624] transition"
+        className="md:hidden fixed top-5 right-5 z-50 p-2 bg-primary/80 text-base-content rounded-lg shadow-md hover:bg-primary transition"
         aria-label="Toggle sidebar"
       >
         <PanelLeftOpen size={24} />
       </button>
 
-      <div className={`fixed top-0 left-0 z-50 h-screen w-72 bg-[#040B14] text-white p-6 transition-transform duration-300 ease-in-out ${
+      <div className={`fixed top-0 left-0 z-50 h-screen w-72 bg-primary text-white p-6 transition-transform duration-300 ease-in-out ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
       } md:translate-x-0 md:flex md:flex-col md:h-screen`}>
 
@@ -79,7 +79,6 @@ const InfoBar = () => {
             <span>Theme Changer</span>
           </button>
         </div>
-
       </div>
     </>
   );
