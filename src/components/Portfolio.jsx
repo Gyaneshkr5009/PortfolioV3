@@ -4,6 +4,11 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const projects = [
   {
+    title: "Vebble(Chat Application)",
+    category: "webapps",
+    link: "https://vebble-chat-app.onrender.com/",
+  },
+  {
     title: "Emperior Explorer",
     category: "web",
     link: "https://historic-empires-explorer.vercel.app/",
