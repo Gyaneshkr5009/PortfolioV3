@@ -6,7 +6,7 @@ const education = [
     degree: 'B.Tech in Computer Science',
     school: 'Guru Tegh Bahadur Institute of Technology',
     year: '2021 – 2025',
-    details: 'CGPA: 8.15 (7th Sem)',
+    details: 'CGPA: 8.15 (Graduated)',
     skills: ['DSA', 'OOPs', 'Computer Networks', 'Operating Systems'],
   },
   {
@@ -151,7 +151,7 @@ const Resume = () => {
           <div className="flex gap-4">
             {/* Preview Button */}
             <a
-              href="https://www.dropbox.com/preview/GyaneshKr_resume.pdf?context=content_suggestions&role=personal"
+              href="https://www.dropbox.com/home?preview=GyaneshKr+Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition duration-200"
@@ -161,7 +161,7 @@ const Resume = () => {
 
             {/* Download Button */}
             <a
-              href="/GyaneshKr_resume.pdf"
+              href="/GyaneshKr_Resume.pdf"
               download
               className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition duration-200"
             >

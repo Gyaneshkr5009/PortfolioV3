@@ -13,7 +13,7 @@ const Home = () => {
 
       <section className="mb-8 text-base leading-relaxed text-gray-600">
         <p>
-          8th Sem B.Tech CSE student passionate about software development, web technologies, and backend systems.
+          B.Tech CSE Graduated passionate about software development, web technologies, and backend systems.
         </p>
       </section>
 
