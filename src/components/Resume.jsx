@@ -4,19 +4,21 @@ import { GraduationCap, Briefcase } from 'lucide-react';
 const education = [
   {
     degree: 'B.Tech in Computer Science',
-    school: 'Guru Gobind Singh Indraprastha University',
+    school: 'Guru Tegh Bahadur Institute of Technology',
     year: '2021 – 2025',
-    details: 'CGPA: 8.04 (7th Sem)',
+    details: 'CGPA: 8.15 (7th Sem)',
     skills: ['DSA', 'OOPs', 'Computer Networks', 'Operating Systems'],
   },
   {
-    degree: 'Senior Secondary',
+    degree: '12th - CBSE',
     school: 'Indraprastha Convent School',
+    details: 'Percentage: 70%',
     year: '2018 – 2020',
   },
   {
-    degree: 'High School',
+    degree: '10th - CBSE',
     school: 'Indraprastha Sr. Sec. Public School',
+    details: 'Percentage: 75%',
     year: '2017 – 2018',
   },
 ];
