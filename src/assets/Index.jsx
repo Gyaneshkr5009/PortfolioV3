@@ -10,6 +10,7 @@ import Infosys from './infosys.webp';
 import Intern from './intern.webp';
 import viksit from './Viksit.webp';
 import Leetcode from './leetcode.webp';
+import Stock_Trading from './Stock_Trading.webp';
 
 export {
     codeForces,
@@ -23,5 +24,6 @@ export {
     Infosys,
     Intern,
     viksit,
-    Leetcode
+    Leetcode,
+    Stock_Trading
 }

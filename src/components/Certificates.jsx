@@ -5,7 +5,8 @@ import {
     Infosys,
     Intern,
     viksit,
-    Leetcode
+    Leetcode,
+    Stock_Trading
 } from '../assets/Index.jsx'
 
 const certificateData = [
@@ -39,6 +40,11 @@ const certificateData = [
     img: Leetcode,
     alt: 'leetcode',
   },
+  {
+    href: 'https://drive.google.com/file/d/12wU_jf8qLZHzcqnXNDYqzyfqh3AVygQR/view?usp=sharing',
+    img: Stock_Trading,
+    alt: 'Full Stack Web Development',
+  }
 ];
 
 const Certificates = () => {
