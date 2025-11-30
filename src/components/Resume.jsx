@@ -151,7 +151,7 @@ const Resume = () => {
           <div className="flex gap-4">
             {/* Preview Button */}
             <a
-              href="https://www.dropbox.com/home?preview=GyaneshKr+Resume.pdf"
+              href="https://www.dropbox.com/home?preview=GyaneshKr_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition duration-200"
