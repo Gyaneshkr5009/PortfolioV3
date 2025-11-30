@@ -161,7 +161,7 @@ const Resume = () => {
 
             {/* Download Button */}
             <a
-              href="/GyaneshKr_Resume.pdf"
+              href="/GyaneshKr_resume.pdf"
               download
               className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition duration-200"
             >
