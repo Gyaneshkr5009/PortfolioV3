@@ -3,13 +3,24 @@ import {
     GA4,
     Naukri,
     Infosys,
-    Intern,
     viksit,
     Leetcode,
-    Stock_Trading
+    Stock_Trading,
+    Samsung,
+    AI
 } from '../assets/Index.jsx'
 
 const certificateData = [
+  {
+    href: 'https://www.linkedin.com/posts/gyanesh-kumar-a73114213_successfully-completed-internship-at-samsung-ugcPost-7441382863662534656-isic?utm_source=share&utm_medium=member_desktop&rcm=ACoAADXxrfcBjq-grZbD_eE1caOTv0gC-JCNtgo',
+    img: Samsung,
+    alt: 'Samsung SQA Internship',
+  },
+  {
+    href: 'https://drive.google.com/drive/folders/191AEFoDW5Gf68DD0javgts39UamRbjYmhttps://drive.google.com/file/d/12wU_jf8qLZHzcqnXNDYqzyfqh3AVygQR/view?usp=drive_linkhttps://drive.google.com/file/d/12wU_jf8qLZHzcqnXNDYqzyfqh3AVygQR/view?usp=sharing',
+    img: AI,
+    alt: 'Generative AI Internship',
+  },
   {
     href: 'https://www.linkedin.com/posts/gyanesh-kumar-a73114213_glad-to-got-a-certificate-from-google-on-activity-7093613133319028736-aTig/?utm_source=share&utm_medium=member_desktop',
     img: GA4,
@@ -24,11 +35,6 @@ const certificateData = [
     href: 'https://www.naukri.com/campus/certificates/young_turks_round_1_achievement/v0/670812725abe131f423ebf91?utm_source=certificate&utm_medium=share&utm_campaign=670812725abe131f423ebf91',
     img: Naukri,
     alt: 'Coding Ninjas',
-  },
-  {
-    href: 'https://www.naukri.com/campus/certificates/young_turks_round_1_achievement/v0/670812725abe131f423ebf91?utm_source=certificate&utm_medium=share&utm_campaign=670812725abe131f423ebf91',
-    img: Intern,
-    alt: 'Intern',
   },
   {
     href: 'https://www.linkedin.com/posts/gyanesh-kumar-a73114213_activity-7153127819491819520-F42-?utm_source=share&utm_medium=member_desktop&rcm=ACoAADXxrfcBjq-grZbD_eE1caOTv0gC-JCNtgo',

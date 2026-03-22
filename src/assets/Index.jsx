@@ -7,10 +7,12 @@ import gfg from './GFG.svg';
 import GA4 from './GA4.webp';
 import Naukri from './Naukri.webp';
 import Infosys from './infosys.webp';
-import Intern from './intern.webp';
 import viksit from './Viksit.webp';
 import Leetcode from './leetcode.webp';
 import Stock_Trading from './Stock_Trading.webp';
+import Samsung from './samsung.png';
+import AI from './GenerativeAI.png';
+
 
 export {
     codeForces,
@@ -22,8 +24,9 @@ export {
     GA4,
     Naukri,
     Infosys,
-    Intern,
     viksit,
     Leetcode,
-    Stock_Trading
+    Stock_Trading,
+    Samsung,
+    AI
 }
