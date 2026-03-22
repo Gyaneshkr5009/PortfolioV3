@@ -37,13 +37,15 @@ const skills = [
 
 const experience = [
   {
-    role: 'Web Development Intern',
-    company: 'CodSoft',
-    duration: '1 Month',
+    role: 'Software Quality Assurance Engineer',
+    company: 'Samsung',
+    duration: '6 Months',
     description: [
-      'Built a personal portfolio website',
-      'Developed a mini e-commerce site',
-      'Created various mini projects',
+      'Worked in Samsung’s Robustness Lab validating TV firmware stability under real-world stress and edge-case conditions.',
+      'Designed and executed test cases for functional, regression, and robustness testing.',
+      'Identified, reproduced, and reported defects to improve product reliability.',
+      'Collaborated with QA and development teams to verify fixes and ensure stable builds.',
+      'Gained hands-on exposure to industry-grade testing workflows, defect lifecycle management, and quality assurance practices.'
     ],
   },
 ];
@@ -151,7 +153,7 @@ const Resume = () => {
           <div className="flex gap-4">
             {/* Preview Button */}
             <a
-              href="https://www.dropbox.com/home?preview=GyaneshKr_Resume.pdf"
+              href="https://www.dropbox.com/scl/fi/tw2al2m4cg0c6kehx873f/GyaneshKr_REsume.pdf?rlkey=ll31cbjfz8vpwymgcsi24a4c9&st=htht0rhw&dl=0"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition duration-200"
