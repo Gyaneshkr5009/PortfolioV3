@@ -4,6 +4,11 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const projects = [
   {
+    title: "PlaySocket",
+    category: "webapps",
+    link: "https://playsocket.netlify.app",
+  },
+  {
     title: "Vebble(Chat Application)",
     category: "webapps",
     link: "https://vebble-chat-app.onrender.com/",
